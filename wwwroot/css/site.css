@@ -1,0 +1,195 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space: normal;
+  text-align: center;
+  word-break: break-all;
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  color: #0366d6;
+}
+
+.btn-primary {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+.nav-pills .nav-link.active, .nav-pills .show > .nav-link {
+  color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+  background-color:cornsilk;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  color:brown;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+.main-img {
+    height: 500px;
+    background-image: url('../content/static/image 1.jpg');
+    background-position: center;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.search {
+    color: #000;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    color: pink;
+    font-size: 18px;
+    border-bottom: 2px solid pink;
+}
+
+ .submit-btn {
+    display: none;
+}
+
+@media screen and (max-width: 768px)
+{
+
+    .submit-btn {
+        display: inline-block;
+    }
+}
+
+.search::placeholder {
+    color: orange;
+
+}
+
+.main-img .Title {
+    color: azure;
+    font-size: larger;
+    text-shadow: 0 0 8px black;
+    margin-bottom: 1rem;
+}
+
+.post .Title {
+    color: azure;
+    position: absolute;
+    font-size: larger;
+    left: 50%;
+    transform: translate(-50%);
+    top: 35%;
+    text-shadow 0 0 8px black;
+}
+
+.post {
+    margin:5px;
+    position:relative;
+    display: flex;
+    height:400px;
+    width: 100%;
+    box-shadow:0 0 5px 0 white;
+
+}
+
+.post img{
+    width:100%;
+    object-fit:cover;
+}
+
+.post-body {
+    margin: -5px 5px 0;
+    padding: 20px 5px;
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.no-shadow{
+    box-shadow:none;
+}
+
+.pages {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2rem;
+}
+.pages a {
+    background-color: grey;
+    color: white ;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid groove;
+    margin: 0 0.25rem;
+
+}
+
+.pages a.active {
+    background-color: palevioletred;
+}
+
+.pages a:hover{
+    background-color: #999;
+    text-decoration: none;
+}
+
+.three-dots {
+    line-height: 1.5rem;
+    font-size: 24px;
+}
+
+.sign-in-form {
+    margin-top: 2rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.sign-in-form div {
+    max-width: 200px;
+    width: 100%;
+    margin-bottom: 1rem;
+}

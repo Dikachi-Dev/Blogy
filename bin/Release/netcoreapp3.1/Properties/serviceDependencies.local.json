@@ -1,0 +1,16 @@
+{
+  "dependencies": {
+    "mssql1": {
+      "type": "mssql.local",
+      "connectionId": "BlogyContext"
+    },
+    "mssql2": {
+      "type": "mssql.local",
+      "connectionId": "BlogyDataContextConnection"
+    },
+    "mssql3": {
+      "type": "mssql.local",
+      "connectionId": "BlogyUserContextConnection"
+    }
+  }
+}

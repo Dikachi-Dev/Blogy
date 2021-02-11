@@ -1,0 +1,59 @@
+﻿@model IndexViewModel
+
+
+@{
+    ViewData["Title"] = "Index";
+    ViewData["Description"] = "This Blog Has everything";
+    ViewData["Keywords"] = "Blog Programming Travel";
+
+}
+
+
+<!--
+
+ var base_path = Context.Request.PathBase;
+    (base_path)
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+    -->
+@*<img src="~/content/static/image 1.jpg"  width="500"/>*@
+
+<div class="main-img">
+    <span class="Title">Amazing Blog Site</span>
+    <form asp-controller="Posts" asp-action="Index" method="get">
+        <input type="hidden"  name="pageNumber" value="@Model.PageNumber" />
+        <input type="hidden" value="@Model.Category" name="category" />
+        <input class="search" type="text" name="search" value="@Model.Search" placeholder="Search" />
+        <button class="submit-btn">Search</button>
+    </form>
+</div>
+<div class="container">
+
+    <partial name="_BlogPagination" model="Model" />
+
+    @foreach (var post in Model.Posts)
+    {
+
+
+        var image_path = $"/Image/{post.Image}";
+
+
+
+        <a class="post" asp-controller="Posts" asp-action="Post" asp-route-id="@post.Id">
+            <img src="@image_path" width="500" />
+            <span class="Title">
+                @post.Title
+            </span>
+        </a>
+
+
+
+    }
+
+    <partial name="_BlogPagination" model="Model" />
+
+
+</div>
+
+

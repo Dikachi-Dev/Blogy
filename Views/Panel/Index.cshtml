@@ -1,0 +1,74 @@
+﻿@model IEnumerable<Blogy.Models.Post>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Admin Panel</h1>
+
+<p>
+    <a asp-action="Edit">Create New</a>
+</p>
+
+
+<div>
+    <ul>
+        @foreach (var post in Model)
+        {
+        <li>
+            <a asp-controller="Posts" asp-action="Details" asp-route-id="@post.Id">
+                @post.Title
+            </a>
+            -
+            <a asp-controller="Panel" asp-action="Edit" asp-route-id="@post.Id">
+                Edit
+            </a>
+            -
+            <a asp-controller="Panel" asp-action="Remove" asp-route-id="@post.Id">
+                Delete
+            </a>
+        </li>
+        }
+    </ul>
+</div>
+
+<!--
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Title)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Body)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Created)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Title)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Body)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Created)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.Id">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.Id">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.Id">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
+
+    -->
